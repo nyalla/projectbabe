@@ -3,6 +3,7 @@ import {Table, Row, Col, Button, Typography} from 'antd';
 import {useHistory} from 'react-router';
 import axios from 'axios';
 import { message } from 'antd';
+import { History } from 'history';
 
 const {Title} = Typography;
 
@@ -11,9 +12,9 @@ const OrganisationDetails = () => {
   const history = useHistory();
   const [allData, setAllData] = useState([]);
 
-  const error = (msg: import("history").History.PoorMansUnknown) => {
-    message.error(msg);
-  };
+  //const error = (msg: History.PoorMansUnknown) => {
+  //  message.error(msg);
+  //};
 
   useEffect(() => {
     axios.get(`https://chitfor.herokuapp.com/management/organisation/organisationId/1`).then(res => {
@@ -21,7 +22,7 @@ const OrganisationDetails = () => {
       setAllData(res.data.data);
     }).catch(err => {
       // what now?
-      error("Error contacting API")
+      //error("Error contacting API")
   });
   },[]);
 
