@@ -12,7 +12,7 @@ const OrganiserDetails = () => {
   const history = useHistory();
   const [allData, setAllData] = useState([]);
 
-  const error = (msg: import("history").History.PoorMansUnknown) => {
+  const error = (msg:String) => {
     message.error(msg);
   };
 

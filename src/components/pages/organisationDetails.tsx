@@ -12,9 +12,9 @@ const OrganisationDetails = () => {
   const history = useHistory();
   const [allData, setAllData] = useState([]);
 
-  //const error = (msg: History.PoorMansUnknown) => {
-  //  message.error(msg);
-  //};
+  const error = (msg:String) => {
+    message.error(msg);
+  };
 
   useEffect(() => {
     axios.get(`https://chitfor.herokuapp.com/management/organisation/organisationId/1`).then(res => {
