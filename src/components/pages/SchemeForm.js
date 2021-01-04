@@ -94,7 +94,7 @@ const SchemeDetails = () => {
         label={
           <span>
             Scheme Name&nbsp;
-            <Tooltip title="Please enter your Scheme name">
+            <Tooltip title="Pleaseaw enter your Scheme name">
                
             </Tooltip>
           </span>
@@ -209,7 +209,7 @@ const SchemeDetails = () => {
  
       <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">
-          Add Scheme
+          Generate Project
         </Button>
       </Form.Item>
     </Form>

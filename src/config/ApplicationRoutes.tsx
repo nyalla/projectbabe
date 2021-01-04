@@ -4,15 +4,8 @@ import List from "../components/pages/list";
 import Form from "../components/pages/form";
 import SideNav from "../components/layouts/sidebar";
 import File from "../components/pages/files";
-import Videos from "../components/pages/videos";
-import OrganisationDetails from "../components/pages/organisationDetails";
-import RegistrationForm from "../components/pages/RegistrationForm";
-import OrganiserForm from "../components/pages/OrganiserForm";
-import OrganiserDetails from "../components/pages/organiserDetails";
-import UserForm from "../components/pages/UserForm";
-import UserDetails from "../components/pages/userDetails";
 import SchemeForm from "../components/pages/SchemeForm";
-import SchemeDetails from "../components/pages/schemeDetails";
+
 
 import { Layout,Avatar } from 'antd';
 import {
@@ -57,15 +50,8 @@ const ApplicationRoutes = () => {
                     <Route path="/list" component={List} />
                     <Route path="/form" component={Form} />
                     <Route path="/files" component={File} />
-                    <Route path="/videos" component={Videos} />
-                    <Route path="/register" component={RegistrationForm} />
-                    <Route path="/organisationDetails" component={OrganisationDetails} />
-                    <Route path="/OrganiserForm" component={OrganiserForm} />
-                    <Route path="/OrganiserDetails" component={OrganiserDetails} />
-                    <Route path="/UserForm" component={UserForm} />
-                    <Route path="/UserDetails" component={UserDetails} />
                     <Route path="/SchemeForm" component={SchemeForm} />
-                    <Route path="/SchemeDetails" component={SchemeDetails} />
+                   
                     <Redirect to="/organisationDetails" from="/" />
                 </Switch>
               </Content>
