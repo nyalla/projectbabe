@@ -44,7 +44,8 @@ const SchemeDetails = () => {
   };
   const onFinish = values => {
     const org = {
-      schemaName: values.schemeName,
+      projectName: values.projectName,
+      appName:values.appName,
       limit: values.schemeLimit,
       duration: values.duration,
       type: values.typeOfScheme,
@@ -90,11 +91,11 @@ const SchemeDetails = () => {
       scrollToFirstError
     >
        <Form.Item
-        name="schemeName"
+        name="projectName"
         label={
           <span>
-            Scheme Name&nbsp;
-            <Tooltip title="Pleaseaw enter your Scheme name">
+            Project Name&nbsp;
+            <Tooltip title="Pleaseaw enter your Project name">
                
             </Tooltip>
           </span>
@@ -102,13 +103,35 @@ const SchemeDetails = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your Scheme name!',
+            message: 'Please input your Project name!',
             whitespace: true,
           },
         ]}
       >
         <Input />
       </Form.Item>
+
+      <Form.Item
+        name="appName"
+        label={
+          <span>
+            Application Name&nbsp;
+            <Tooltip title="Pleaseaw enter your Application name">
+               
+            </Tooltip>
+          </span>
+        }
+        rules={[
+          {
+            required: true,
+            message: 'Please input your Applcation name!',
+            whitespace: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
 
       <Form.Item
         name="schemeLimit"
